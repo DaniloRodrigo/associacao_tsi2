@@ -15,7 +15,17 @@ public class Assosiacao {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Pedido pedido = new Pedido();
+        Produto p1 = new Produto();
+        p1.preco = 20;
+        Produto p2 = new Produto();
+        p2.preco = 30;
+        
+        pedido.inicia();
+        pedido.adicionaProduto(p1, 0);
+        System.out.println(pedido.calculaValor());
+        pedido.adicionaProduto(p2, 1);
+        System.out.println(pedido.calculaValor());
     }
     
 }

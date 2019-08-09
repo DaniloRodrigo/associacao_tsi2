@@ -23,7 +23,8 @@ public class Pedido {
     public double calculaValor(){
         double soma = 0;
         for (int i = 0; i < this.produtos.length; i++) {
-            soma += this.produtos[i].preco;
+            if(this.produtos[i]!= null)
+                soma += this.produtos[i].preco;
         }
         return soma;
     }
